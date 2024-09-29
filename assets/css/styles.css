@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+:root {
+    --text-color-black-gray: #575d5e;
+    --Primary-color-black: #152427;
+    --Primary-color-black-green: #143c3c;
+}
+
+.btn {
+    --height: 57px;
+
+    display: inline-block;
+    width: 173px;
+    min-width: 173px;
+    height: var(--height);
+    border-radius: 99px;
+    border: 1.5px solid #143c3c;
+    background: var(--Primary-color-black-green);
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: var(--height);
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1140px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    min-height: 100vh;
+    padding-top: 28px;
+}
+
+.header__inner {
+    position: relative;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__body {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__link {
+    font-family: "Public Sans";
+    color: var(--text-color-black-gray);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.56;
+    padding: 8px 19px;
+}
+
+.navbar__link:hover {
+    text-shadow: 1px 0 0 currentColor;
+    color: var(--Primary-color-black);
+}
+
+.navbar__link--active {
+    position: relative;
+    text-shadow: 1px 0 0 currentColor;
+    color: var(--Primary-color-black);
+}
+
+.navbar__link--active::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background: var(--Primary-color-black-green);
+    bottom: -25px;
+    left: 21px;
+}
+
+.header__action {
+    margin-left: 88px;
+}
+
+.header__action--signup {
+    font-family: "Public Sans";
+    padding: 0 20px;
+}
+
+.header__action--signup::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #fff 0%,
+        #dddcdc 51.09%,
+        rgba(212, 212, 212, 0) 99.68%
+    );
+    bottom: -14px;
+    left: 0;
+}
