@@ -17,6 +17,8 @@ body {
     --text-color-black-gray: #575d5e;
     --Primary-color-black: #152427;
     --Primary-color-black-green: #143c3c;
+    --Scondery-color-light-green: #e2eddf;
+    --text-color-light-gray: #7d8188;
 }
 
 .btn {
@@ -58,10 +60,53 @@ a {
     line-height: 1.2;
 }
 
+.lv2 {
+    color: var(--Primary-color-black);
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1.24;
+}
+
+.lv3 {
+    color: var(--Primary-color-black);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.control {
+    display: flex;
+    column-gap: 17px;
+}
+
+.control__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    border: 1px solid var(--Scondery-color-light-green);
+    background-color: var(--Scondery-color-light-green);
+    color: var(--Primary-color-black-green);
+    transition: 0.25s;
+}
+
+.control__btn:last-child {
+    transform: rotate(180deg);
+}
+
+.control__btn:hover {
+    color: #fff;
+    background-color: var(--Primary-color-black-green);
+    border-color: var(--Primary-color-black-green);
+    cursor: pointer;
+}
+
 /* Header */
 .header {
     min-height: 100vh;
-    padding: 28px 0 52px;
+    padding: 28px 0 88px;
 }
 
 .header__inner {
@@ -282,4 +327,171 @@ a {
     transform: rotate(175.95deg);
     top: 240px;
     right: 90px;
+}
+
+/* Social */
+.social {
+    margin-top: 42px;
+    margin-bottom: 53px;
+}
+
+.social__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 78px 121px;
+    border-radius: 999px;
+    background: var(--Scondery-color-light-green);
+}
+
+.social__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google {
+    color: var(--Primary-color-black-green);
+    font-size: 3.1rem;
+    font-weight: 500;
+}
+
+.slack__heading {
+    margin-left: 3px;
+    color: var(--Primary-color-black-green);
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.agworld__heading {
+    margin-left: 14px;
+    color: #163c35;
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+.riotinto {
+    color: var(--Primary-color-black-green);
+    font-family: "Sonsie One";
+    font-size: 2.3rem;
+    font-weight: 400;
+}
+
+.heroku__heading {
+    margin-left: 10px;
+    color: var(--Primary-color-black-green);
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1995rem;
+}
+
+/* Service */
+.services {
+    padding: 53px 0;
+}
+
+.service__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service__row--left {
+    width: 46%;
+}
+
+.service__breadcrumb {
+    position: relative;
+    display: inline-block;
+    color: var(--Primary-color-black);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.62;
+    margin-left: 41px;
+    margin-bottom: 12px;
+}
+
+.service__breadcrumb::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    background: var(--Primary-color-black);
+    top: 9px;
+    left: -41px;
+}
+
+.service__row--heading {
+    position: relative;
+}
+
+.service__row--heading::after {
+    content: "";
+    display: inline-block;
+    width: 66px;
+    height: 2px;
+    background: var(--Primary-color-black);
+    position: absolute;
+    bottom: 19px;
+    right: 103px;
+}
+
+.service__list {
+    margin-top: 76px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+}
+
+.service-item {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.service-item:hover {
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
+}
+
+.service-item:hover .service-item__img {
+    transform: scale(1.1);
+}
+
+.service-item:hover .service-item__body {
+    padding-left: 18px;
+}
+
+.service-item__thumb {
+    height: 318px;
+    overflow: hidden;
+}
+
+.service-item__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.25s;
+}
+
+.service-item__body {
+    margin-top: 24px;
+    padding-bottom: 23px;
+    transition: 0.25s;
+}
+
+.service-item__heading {
+    display: inline-block;
+}
+
+.service-item__desc {
+    color: var(--text-color-light-gray);
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7;
+    width: 268px;
+    margin-top: 18px;
 }
