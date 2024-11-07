@@ -19,6 +19,7 @@ body {
     --Primary-color-black-green: #143c3c;
     --Scondery-color-light-green: #e2eddf;
     --text-color-light-gray: #7d8188;
+    --text-color-black-gray: #575d5e;
 }
 
 .btn {
@@ -101,6 +102,28 @@ a {
     background-color: var(--Primary-color-black-green);
     border-color: var(--Primary-color-black-green);
     cursor: pointer;
+}
+
+.breadcrumb {
+    position: relative;
+    display: inline-block;
+    color: var(--Primary-color-black);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.62;
+    margin-left: 41px;
+    margin-bottom: 12px;
+}
+
+.breadcrumb::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    background: var(--Primary-color-black);
+    top: 9px;
+    left: -41px;
 }
 
 /* Header */
@@ -400,28 +423,6 @@ a {
     width: 46%;
 }
 
-.service__breadcrumb {
-    position: relative;
-    display: inline-block;
-    color: var(--Primary-color-black);
-    font-size: 1.6rem;
-    font-weight: 500;
-    line-height: 1.62;
-    margin-left: 41px;
-    margin-bottom: 12px;
-}
-
-.service__breadcrumb::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    width: 25px;
-    height: 1px;
-    background: var(--Primary-color-black);
-    top: 9px;
-    left: -41px;
-}
-
 .service__row--heading {
     position: relative;
 }
@@ -494,4 +495,192 @@ a {
     line-height: 1.7;
     width: 268px;
     margin-top: 18px;
+}
+
+/* About us */
+.about-us {
+    padding: 96px 0 79px;
+}
+
+.about-us__inner {
+    display: flex;
+}
+
+.about-us__images {
+    width: 57.5%;
+    display: flex;
+    position: relative;
+}
+
+.about-us__img {
+    width: 284px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 210px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    box-shadow: 0px 4px 234px 11px rgba(59, 137, 71, 0.25);
+}
+
+.about-us__img:nth-child(1) {
+    margin-top: 90px;
+}
+
+.about-us__img:nth-child(2) {
+    margin-top: 13px;
+    margin-left: 21px;
+}
+
+.about-us__content {
+    width: 42.5%;
+}
+
+.breadcrumb__about-us {
+    margin-bottom: 20px;
+}
+
+.about-us__desc {
+    margin-top: 11px;
+    color: var(--text-color-light-gray);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.about-us__list {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-us__list:last-child {
+    margin-top: 58px;
+}
+
+.about-us__list::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 485px;
+    height: 1px;
+    background: #83a17d;
+    bottom: -20px;
+}
+
+strong {
+    color: var(--Primary-color-black);
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1.23;
+}
+
+.about-us__list--desc {
+    font-size: 1.4rem;
+    margin-left: 24px;
+    color: var(--text-color-light-gray);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.about-block {
+    position: absolute;
+    font-family: "Public Sans";
+    background: #fff;
+    padding: 19px 11px 11px 17px;
+    border-radius: 8px;
+    bottom: 8px;
+    right: 55px;
+}
+
+.block__heading {
+    color: var(--Primary-color-black);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-left: 6px;
+}
+
+.block__desc {
+    margin-top: 6px;
+    margin-left: 6px;
+    color: var(--text-color-black-gray);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.block__value,
+.block__load,
+.block__team--interview {
+    display: block;
+
+    color: var(--Primary-color-black);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.block__value {
+    margin-top: 10px;
+    position: relative;
+}
+
+.block__value::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    border-radius: 10px;
+    background: #83a17d;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    z-index: 2;
+}
+
+.block__load {
+    margin-top: 8px;
+    position: relative;
+    text-align: right;
+}
+
+.block__load::before {
+    content: "";
+    display: inline-block;
+    width: 96px;
+    height: 2px;
+    border-radius: 10px;
+    background: #eaeaea;
+    position: absolute;
+    z-index: 0;
+    top: -7px;
+    right: 2px;
+    z-index: 1;
+}
+
+.block__circle {
+    margin-top: 3px;
+    display: block;
+}
+
+.block__teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.block__images {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.block__team--img {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid #fff;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    margin-left: -6px;
 }
