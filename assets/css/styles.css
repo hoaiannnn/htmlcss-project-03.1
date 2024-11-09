@@ -684,3 +684,126 @@ strong {
     background: url(<path-to-image>) lightgray 50% / cover no-repeat;
     margin-left: -6px;
 }
+/* Our Process */
+.process {
+    padding-bottom: 148px;
+}
+
+.breadcrumb__process {
+    margin-top: 36px;
+}
+
+.process__heading {
+    width: 477px;
+    position: relative;
+}
+
+.process__heading::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 66px;
+    height: 2px;
+    background: var(--Primary-color-black);
+    top: 84px;
+    right: -9px;
+}
+
+.process__list {
+    margin-top: 81px;
+}
+
+.process-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 53px 30px 46px;
+}
+
+.process-item::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 1131px;
+    height: 3px;
+    background: linear-gradient(
+        180deg,
+        #83a17d 4.17%,
+        rgba(131, 161, 125, 0) 36.46%
+    );
+    bottom: 25px;
+    left: 0;
+}
+
+.process-item:hover {
+    border-radius: 33px;
+    background: var(--Scondery-color-light-green, #e2eddf);
+    padding: 57px 30px 76px;
+}
+
+.process-item:hover .process-item__row--desc {
+    display: none;
+}
+
+.process-item:hover .process-item__row--link {
+    visibility: visible;
+}
+
+.process-item:hover:after {
+    content: none;
+}
+.process-item:hover .process__img {
+    visibility: visible;
+}
+
+.process-item__row {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.process-item__row--number {
+    color: var(--Primary-color-black-green);
+    font-size: 7.2rem;
+    font-weight: 600;
+    line-height: 0.72;
+}
+
+.process-item__row--title {
+    margin-left: 64px;
+}
+
+.process-item__row--title:nth-child(2) {
+    margin-left: 49px;
+}
+
+.process-item__row--title:nth-child(3) {
+    margin-left: 47px;
+}
+
+.process-item__row--link {
+    color: var(--text-color-black-gray);
+    font-size: 1.8rem;
+    line-height: 1;
+    text-decoration: underline;
+    position: relative;
+    visibility: hidden;
+    top: 22px;
+}
+
+.process-item__row--desc {
+    color: var(--text-color-light-gray);
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55;
+    width: 572px;
+}
+
+.process__img {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 92px;
+}
