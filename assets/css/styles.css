@@ -20,6 +20,8 @@ body {
     --Scondery-color-light-green: #e2eddf;
     --text-color-light-gray: #7d8188;
     --text-color-black-gray: #575d5e;
+    --Scondery-color-blue: #83a17d;
+    --Scondery-color-gray: #6a8383;
 }
 
 .btn {
@@ -806,4 +808,67 @@ strong {
     position: absolute;
     bottom: 0;
     right: 92px;
+}
+
+/* Video */
+.video {
+    background: var(--Primary-color-black-green);
+    padding-top: 116px;
+    padding-bottom: 63px;
+}
+
+.video__content {
+    display: flex;
+}
+
+.video__heading {
+    width: 550px;
+    color: #e7f9f9;
+    position: relative;
+}
+
+.video__heading::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 66px;
+    height: 2px;
+    background: var(--Scondery-color-blue);
+    bottom: 20px;
+    right: 97px;
+}
+
+.video__desc {
+    margin-top: 11px;
+    color: var(--Scondery-color-gray);
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55;
+    width: 570px;
+}
+
+.video__link {
+    margin-top: 13px;
+}
+
+.video__link--action {
+    color: #fff;
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+.video__link--icon {
+    margin-left: 26px;
+    color: #80a07b;
+}
+
+.video__clip {
+    margin-top: 65px;
+    width: 1140px;
+    height: 544px;
+    border-radius: 22px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
 }
